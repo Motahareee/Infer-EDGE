@@ -65,6 +65,20 @@ As for the output data size after different layers, in VGG11 (Fig. 1), we observ
 
 DenseNet versions share the same potential cut points, which are 4, 6, 8, and 14, even though the size of output data is different.
 
+<div style="display: flex;">
+    <img src="Figures/vgg11_outputdata.png" alt="VGG11 Output Data" style="width: 200px;">
+    <img src="Figures/vgg19_outputdata.png" alt="VGG19 Output Data" style="width: 200px;">
+    <img src="Figures/resnet18_outputdata.png" alt="ResNet18 Output Data" style="width: 200px;">
+    <img src="Figures/resnet50_outputdata.png" alt="ResNet50 Output Data" style="width: 200px;">
+    <img src="Figures/densenet121_outputdata.png" alt="DenseNet121 Output Data" style="width: 200px;">
+    <img src="Figures/densenet161_outputdata.png" alt="DenseNet161 Output Data" style="width: 200px;">
+</div>
+
+**Figure: Layerwise output data size comparisons of different versions of VGG, ResNet, and DenseNet**
+
+
+
+
 ## Observations on DNN Partitioning
 
 Next, we measure end-to-end latency and energy consumption for all layers of the DNNs. End-to-end latency involves processing the initial part of the DNN, including the cut point layer, on the IoT device, transmitting the output of the cut point layer wirelessly, and subsequently resuming the inference task to the final layer on the server. For end-to-end latency, we exclude server energy consumption. Figures 7 summarize the end-to-end latency and energy consumption of VGG19 over 8 Mbps and 20 Mbps transmission speeds, simulating LTE and WiFi connectivity. 
