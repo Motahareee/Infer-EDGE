@@ -39,6 +39,18 @@ For the ResNet models, Figure 3 illustrates that ResNet18 exhibits higher comput
 
 The overarching trend emerging from these observations is the latency diversity among layers between versions.
 
+
+![VGG](version_vgg__.png)
+![VGG Cumulative](version_vgg_cum__.png)
+![ResNet](version_resnet__.png)
+![ResNet Cumulative](version_resnet_cum__.png)
+![DenseNet](version_densenet__.png)
+![DenseNet Cumulative](version_densnet_cum__.png)
+
+**Figure: Layerwise latency comparisons of different versions of VGG, ResNet, and DenseNet**
+
+
+
 ## Layerwise Performance Analysis for DNN Partitioning
 
 Next, we perform experiments to observe layerwise performance in terms of output data size, computation latency, and cumulative energy consumed by the TX2 (i.e., IoT device) in order to ascertain layer choices for DNN partition.
