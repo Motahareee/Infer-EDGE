@@ -78,6 +78,49 @@ DenseNet versions share the same potential cut points, which are 4, 6, 8, and 14
 
 
 
+<div style="display: flex; justify-content: center;">
+    <div style="margin-right: 10px;">
+        <img src="vgg11_cume.png" alt="VGG11 Cume" style="width: 150px;">
+        <br>
+        <span>Figure 1: VGG11 Cume</span>
+    </div>
+    <div style="margin-left: 10px;">
+        <img src="vgg19_cume.png" alt="VGG19 Cume" style="width: 150px;">
+        <br>
+        <span>Figure 2: VGG19 Cume</span>
+    </div>
+</div>
+
+<div style="display: flex; justify-content: center;">
+    <div style="margin-right: 10px;">
+        <img src="resnet18_cume.png" alt="ResNet18 Cume" style="width: 150px;">
+        <br>
+        <span>Figure 3: ResNet18 Cume</span>
+    </div>
+    <div style="margin-left: 10px;">
+        <img src="resnet50_cume.png" alt="ResNet50 Cume" style="width: 150px;">
+        <br>
+        <span>Figure 4: ResNet50 Cume</span>
+    </div>
+</div>
+
+<div style="display: flex; justify-content: center;">
+    <div style="margin-right: 10px;">
+        <img src="densnet121_cume.png" alt="DenseNet121 Cume" style="width: 150px;">
+        <br>
+        <span>Figure 5: DenseNet121 Cume</span>
+    </div>
+    <div style="margin-left: 10px;">
+        <img src="densenet161_cume.png" alt="DenseNet161 Cume" style="width: 150px;">
+        <br>
+        <span>Figure 6: DenseNet161 Cume</span>
+    </div>
+</div>
+
+
+**Figure: Layerwise device energy consumption comparisons of different versions of VGG, ResNet, and DenseNet**
+
+
 
 ## Observations on DNN Partitioning
 
