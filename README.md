@@ -15,3 +15,16 @@ As mentioned earlier, DNN model architecture optimization includes approaches su
 For the benchmarking experiments and in the rest of the paper, we thus used many versions of a particular DNN (e.g., VGG) as manifestations of different DNN model architecture optimization techniques.
 
 In particular, we utilized the PyTorch implementations of different versions of the selected model: VGG11 and VGG19, ResNet18 and ResNet50, DenseNet121 and DenseNet161. The benchmarking process involved evaluating these models on the entire ImageNet dataset (Deng et al., 2009), and reporting the corresponding top-1 accuracy scores, inference latency, and energy consumption by Jetson TX2 (as shown in Table 1).
+
+# Benchmarking Results
+
+| Model       | Accuracy (acc1) | Latency (ms) | Energy (J) |
+|-------------|------------------|--------------|------------|
+| vgg11       | 69.04%           | 1044.48      | 6.17       |
+| vgg19       | 72.40%           | 1862.89      | 11.83      |
+| densenet121 | 74.43%           | 4292.17      | 28.00      |
+| densenet161 | 77.11%           | 7845.49      | 50.99      |
+| resnet18    | 69.76%           | 627.59       | 3.73       |
+| resnet50    | 76.15%           | 984.62       | 7.46       |
+
+*Table 1: Accuracy, Latency, and Energy Triangle benchmarked on ImageNet validation set.*
