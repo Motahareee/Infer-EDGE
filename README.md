@@ -40,14 +40,15 @@ For the ResNet models, Figure 3 illustrates that ResNet18 exhibits higher comput
 The overarching trend emerging from these observations is the latency diversity among layers between versions.
 
 
-![VGG](version_vgg__.png)
-![VGG Cumulative](version_vgg_cum__.png)
-![ResNet](version_resnet__.png)
-![ResNet Cumulative](version_resnet_cum__.png)
-![DenseNet](version_densenet__.png)
-![DenseNet Cumulative](version_densnet_cum__.png)
+<img src="version_vgg__.png" alt="VGG" width="300">
+<img src="version_vgg_cum__.png" alt="VGG Cumulative" width="300">
+<img src="version_resnet__.png" alt="ResNet" width="300">
+<img src="version_resnet_cum__.png" alt="ResNet Cumulative" width="300">
+<img src="version_densenet__.png" alt="DenseNet" width="300">
+<img src="version_densnet_cum__.png" alt="DenseNet Cumulative" width="300">
 
 **Figure: Layerwise latency comparisons of different versions of VGG, ResNet, and DenseNet**
+
 
 
 
