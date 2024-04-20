@@ -39,3 +39,12 @@ For the ResNet models, Figure 3 illustrates that ResNet18 exhibits higher comput
 
 The overarching trend emerging from these observations is the latency diversity among layers between versions.
 
+## Layerwise Performance Analysis for DNN Partitioning
+
+Next, we perform experiments to observe layerwise performance in terms of output data size, computation latency, and cumulative energy consumed by the TX2 (i.e., IoT device) in order to ascertain layer choices for DNN partition.
+
+It is to be noted that for this analysis, we primarily focus on the higher-level layers of the DNN models. For example, the number of convolutional layers in DenseNet versions exceeds 100. However, due to complex dependencies within the dense blocks, we avoid partitioning the DNN in the middle of the dense block, thereby limiting our analysis to the characteristics of the higher-level layers, which sum up to 14.
+
+As for the output data size after different layers, in VGG11 (Fig. 1), we observe a favorable latency-to-output data size ratio in layers 3, 6, 11, and 27. However, this pattern shifts slightly in VGG19 (Fig. 2), where more efficient layers with respect to output size are 5, 10, 19, and 43. In ResNet (Figs. 3 and 4), on the other hand, the difference between versions lies in the additional layers towards the end. Consequently, potential cut points in ResNet18 are 3, 14, 19, and 49, while in ResNet 50, 3, 13, 20, and 115 appear to be the best options. However, for both ResNet and VGG, the cost of local processing before these potential cut points, particularly in terms of computational overhead, is significant. The layerwise latency and cumulative energy consumption of these models are plotted in Fig. 5 and Fig. 6.
+
+DenseNet versions share the same potential cut points, which are 4, 6, 8, and 14, even though the size of output data is different.
