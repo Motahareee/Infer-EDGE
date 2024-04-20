@@ -28,3 +28,14 @@ In particular, we utilized the PyTorch implementations of different versions of 
 | resnet50    | 76.15%           | 984.62       | 7.46       |
 
 *Table 1: Accuracy, Latency, and Energy Triangle benchmarked on ImageNet validation set.*
+
+## Layerwise Latency Measurements and Latency Diversity Among Versions
+
+As depicted in Figure 1, we conduct layerwise latency measurements for each version of the DNN models to evaluate differences in latency attributed to the computational complexity of individual layers. These measurements are performed on our testbed using 50 images from the ImageNet validation set. Both layerwise and cumulative latency across all layers are calculated.
+
+For VGG models, as shown in Figure 2, we observe that VGG19 initially performs similarly to VGG11. However, as the model progresses, the computational cost of VGG19 surpasses that of VGG11, primarily due to its larger number of layers rather than the complexity of individual layers, thus depicting diverse layer characteristics among such models.
+
+For the ResNet models, Figure 3 illustrates that ResNet18 exhibits higher computational complexity compared to ResNet50 in the initial layers. Despite ResNet50 having more convolutional layers, ResNet18 proves to be more computationally expensive. However, such patterns differ for the DenseNet models. Although both DenseNet121 and DenseNet161 have the same number of layers, as shown in Figure 4, layers 9 and 10 of DenseNet161 are found to be computationally more expensive, likely due to the presence of additional convolutional layers.
+
+The overarching trend emerging from these observations is the latency diversity among layers between versions.
+
